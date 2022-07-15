@@ -79,21 +79,40 @@ function up()
         console.log("when up arrow key is pressed, x= "+ greencar_x+" y= "+greencar_y );
         uploadBackground();
         uploadgreencar();
-        ctx.drawImage(greencar_imgTag, greencar_x, greencar_y, greencar_width, greencar_height);
     }
 }
 
 function down()
 {
 	//Define function to move the car downward
-}
+	if (greencar_y <= 300){
+        greencar_y= greencar_y+10;
+        console.log("when up down key is pressed, x= "+ greencar_x+" y= "+greencar_y );
+        uploadBackground();
+        uploadgreencar();
+    }
+}		
 
 function left()
 {
 	//Define function to move the car left side
+	if (greencar_x >= 0){
+        greencar_x= greencar_x-10;
+        console.log("when up left key is pressed, x= "+ greencar_x+" y= "+greencar_y );
+        uploadBackground();
+        uploadgreencar();
+    }
 }
+
 
 function right()
 {
 	//Define function to move the car right side
+	if (greencar_x <= 725){
+        greencar_x= greencar_x+10;
+        console.log("when up right key is pressed, x= "+ greencar_x+" y= "+greencar_y );
+        uploadBackground();
+        uploadgreencar();
+    }
 }
+
